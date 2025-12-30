@@ -31,7 +31,7 @@ const secondLargestNumber = (arr) => {
   return secondLargest;
 };
 // console.log(secondLargestNumber([10, 20, 4, 45, 99, 30, 70, 12, 50]));
-
+// week two
 const mergeTwoSortedArr = (arr1, arr2) => {
   const tempArr = [...arr1, ...arr2];
   for (let i = 0; i < tempArr.length; i++) {
