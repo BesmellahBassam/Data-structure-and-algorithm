@@ -6,13 +6,19 @@ Given two arrays, return a new array containing the values that appear in both.
 */
 
 const arrayIntersection = (arr1, arr2) => {
-  let commanArr = [];
-  for (let i = 0; i < arr1.length; i++) {
-    for (let j = 0; j < arr1.length; j++) {
-      if (arr1[j] === arr2[i]) {
-        commanArr.push(arr1[j]);
-      }
+  const arr2Map = {};
+  for (const val of arr2) {
+    arr2Map[val] = true;
+  }
+  const result = [];
+  const added = {};
+
+  for (const v of arr1) {
+    if (arr2Map[v] && !added[v]) {
+      added[v] = true;
+      result.push(v);
     }
   }
-  return commanArr;
+  return result;
 };
+// console.log(arrayIntersection([1, 2, 3, 3, 4, 3], [2, 3, 4, 3])); // [2, 3, 4]

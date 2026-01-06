@@ -6,15 +6,25 @@ Given two sorted arrays, merge them into a single sorted array.
 */
 
 const mergeTwoSortedArr = (arr1, arr2) => {
-  const tempArr = [...arr1, ...arr2];
-  for (let i = 0; i < tempArr.length; i++) {
-    for (let j = i + 1; j < tempArr.length; j++) {
-      if (tempArr[i] > tempArr[j]) {
-        const t = tempArr[i];
-        tempArr[i] = tempArr[j];
-        tempArr[j] = t;
-      }
+  const result = [];
+  let i = 0,
+    j = 0;
+
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] <= arr2[j]) {
+      result.push(arr1[i]);
+      i++;
+    } else {
+      result.push(arr2[j]);
+      j++;
     }
   }
-  return tempArr;
+
+  // Append any leftovers (only one of these will add anything)
+  while (i < arr1.length) result.push(arr1[i++]);
+  while (j < arr2.length) result.push(arr2[j++]);
+
+  return result;
 };
+
+// mergeTwoSortedArr([1, 3, 5], [2, 4, 6]) === [1, 2, 3, 4, 5, 6]

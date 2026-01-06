@@ -17,4 +17,4 @@ const evenBeforeOdd = (arr) => {
   return [...resultArr, ...remained];
 };
 
-module.exports = { evenBeforeOdd };
+//   evenBeforeOdd([1, 2, 3, 4]) === [2, 4, 1, 3]

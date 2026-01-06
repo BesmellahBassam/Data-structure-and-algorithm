@@ -6,10 +6,15 @@ Given a string, return true if it reads the same forward and backward
   palindrome("racecar") === true
   palindrome("abc") === false
 */
+
 const palindrome = (str) => {
-  let reversed = "";
-  for (const char of str) {
-    reversed = char + reversed;
+  let i = 0;
+  let j = str.length - 1;
+
+  while (i < j) {
+    if (str[i] !== str[j]) return false;
+    i++;
+    j--;
   }
-  return str === reversed;
+  return true;
 };
