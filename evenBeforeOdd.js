@@ -18,8 +18,6 @@ const evenBeforeOdd = (arr) => {
     while (left < right && arr[right] % 2 !== 0) {
       right--;
     }
-
-    // Swap them
     if (left < right) {
       [arr[left], arr[right]] = [arr[right], arr[left]];
       left++;
