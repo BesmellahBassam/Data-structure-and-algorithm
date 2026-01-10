@@ -20,7 +20,6 @@ const mergeTwoSortedArr = (arr1, arr2) => {
     }
   }
 
-  // Append any leftovers (only one of these will add anything)
   while (i < arr1.length) result.push(arr1[i++]);
   while (j < arr2.length) result.push(arr2[j++]);
 

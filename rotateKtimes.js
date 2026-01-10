@@ -9,13 +9,12 @@ Given an array and a number k (times), rotate the array to the right k times
 const rotateKTimes = (arr, times) => {
   const len = arr.length;
   const k = times % len;
-  const copy = [...arr];
-  const tempArr = [];
+  const result = [];
 
-  for (let i = 0; i < k; i++) {
-    tempArr.unshift(copy.pop());
+  for (let i = 0; i < len; i++) {
+    result[(i + k) % len] = arr[i];
   }
-  return [...tempArr, ...copy];
+  return result;
 };
 
 console.log(rotateKTimes([1, 2, 3, 4, 5], 2));
