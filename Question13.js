@@ -10,7 +10,7 @@
    isArmstrong(123) === "No Arm strong"
 */
 
-const isArmstrong = (number) => {
+const isArmStrong = (number) => {
   const toString = number.toString();
   let sumOfAll = 0;
   for (let i = 0; i < toString.length; i++) {
@@ -25,3 +25,21 @@ const isArmstrong = (number) => {
   return "No Arm strong";
 };
 // console.log(isArmstrong(370));
+
+/*
+---Directions
+   Given a base number and an exponent, return base raised to that power
+   using a loop (no Math.pow).
+--Examples
+   powerFunction(3, 2) === 9
+   powerFunction(2, 5) === 32
+*/
+
+const powerFunction = (num, power) => {
+  result = num;
+  for (let index = 1; index < power; index++) {
+    result = result * num;
+  }
+  return result;
+};
+// console.log(powerFunction(3, 5));
