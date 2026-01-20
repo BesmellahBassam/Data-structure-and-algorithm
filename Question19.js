@@ -29,4 +29,3 @@ const twoSidedSteps = (n) => {
   }
 };
 // twoSidedSteps(5);
-// console.log(twoSidedSteps(3));

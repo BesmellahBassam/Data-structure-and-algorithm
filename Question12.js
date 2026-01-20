@@ -1,17 +1,19 @@
-/*
----Directions
-   Given a non-negative integer N, return N! (factorial) using an iterative approach.
-   Factorial means: N! = 1 * 2 * 3 * ... * N, and 0! = 1.
---Examples
-   findFactorial(5) === 120
-   findFactorial(0) === 1
+/*Given a string, return true if it reads the same forward and backward
+ otherwise return false.
+--- Examples
+  palindrome("abba") === true
+  palindrome("racecar") === true
+  palindrome("abc") === false
 */
 
-const findFactorial = (num) => {
-  result = 1;
-  for (let index = 1; index < num; index++) {
-    result = result * (index + 1);
+const palindrome = (str) => {
+  let i = 0;
+  let j = str.length - 1;
+
+  while (i < j) {
+    if (str[i] !== str[j]) return false;
+    i++;
+    j--;
   }
-  return result;
+  return true;
 };
-// console.log(findFactorial(7));
