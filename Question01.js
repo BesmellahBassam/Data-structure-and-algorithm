@@ -6,7 +6,12 @@
    swapVariables("x", "y") -> { a: "y", b: "x" }
 */
 const swapVariables = (a, b) => {
-  [a, b] = [b, a];
+  // First approach
+  // [a, b] = [b, a];
+  // return { a, b };
+  // Use addition and subtraction
+  b = b - a;
+  a = a + a;
   return { a, b };
 };
-module.export = { swapVariables };
+console.log(swapVariables(10, 20));

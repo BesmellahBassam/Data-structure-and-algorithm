@@ -23,6 +23,6 @@ function triangleCheck(a, b, c) {
   // Type classification
   if (a === b && b === c) return "valid triangle, equilaterl";
   if (a === b || a === c || b === c) return "valid triangle, Isoscles";
-  return "falid triangle, scalene";
+  return "valid triangle, scalene";
 }
 // console.log(triangleValidityAndType(3, 4, 5)); // Valid triangle, Scalene

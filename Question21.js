@@ -13,9 +13,10 @@ const countDigits = (number) => {
   // return number.toString().length;
 
   // Second Way
-  const toString = number.toString();
   let count = 0;
-  for (let index = 0; index < toString.length; index++) {
+  let n = Math.abs(number);
+  while (n > 0) {
+    n = Math.floor(n / 10);
     count++;
   }
   return count;

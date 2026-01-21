@@ -9,14 +9,14 @@
      { simpleInterest: 100, compoundInterest: 102.5 }
 */
 
-const computeInterest = (principle, rate, time) => {
+const calculateInterest = (principle, rate, time) => {
   const simpleInter = (1 * rate * time) / 100;
-  let computeInterest = 1 + rate / 100;
+  let compoundInterest = 1 + rate / 100;
   for (let index = 1; index < time; index++) {
-    computeInterest = computeInterest * computeInterest;
+    compoundInterest = compoundInterest * compoundInterest;
   }
-  computeInterest -= 1;
-  computeInterest = principle * computeInterest;
-  console.log("simple interest", simpleInter, "computeer inter", computeInterest);
+  compoundInterest -= 1;
+  compoundInterest = principle * compoundInterest;
+  console.log("simple interest", simpleInter, "computeer inter", compoundInterest);
 };
-// console.log(computeInterest(1000, 5, 2));
+// console.log(calculateInterest(1000, 5, 2));

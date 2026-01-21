@@ -10,7 +10,6 @@
 const sumofNatNums = (number) => {
   let sum = 0;
   for (let index = 1; index <= 5; index++) {
-    // NOTE: currently sums to 5, not to "number"
     sum += index;
   }
   return sum;

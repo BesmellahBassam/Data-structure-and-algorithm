@@ -6,9 +6,9 @@
    calculateRectangeAreaAndPerimeter(1, 1) -> { area: 1, perimeter: 4 }
 */
 
-const calculateRectangeAreaAndPerimeter = (widht, height) => {
-  const area = widht * height;
-  const perimeter = 2(height + widht);
+const calculateRectangleAreaAndPerimeter = (width, height) => {
+  const area = width * height;
+  const perimeter = 2 * (height + width);
   console.log("area is", area, "perimeter is", perimeter);
 };
-// calculateRectangeAreaAndPerimeter(4, 5);
+// calculateRectangleAreaAndPerimeter(4, 5);

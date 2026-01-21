@@ -8,10 +8,11 @@ sumOfDigits(500) === 5     // 5 + 0 + 0
 */
 
 const sumOfDigits = (number) => {
-  const toString = number.toString();
+  const n = Math.abs(number);
   result = 0;
-  for (const char of toString) {
-    result += parseInt(char);
+  while (n > 0) {
+    result += number % 10;
+    number = Math.floor(number / 10);
   }
   return result;
 };
