@@ -28,4 +28,4 @@ const evenBeforeOdd = (arr) => {
   return arr;
 };
 
-console.log(evenBeforeOdd([1, 2, 3, 4, 7, 9, 11, 13, 14, 30]));
+// console.log(evenBeforeOdd([1, 2, 3, 4, 7, 9, 11, 13, 14, 30]));
