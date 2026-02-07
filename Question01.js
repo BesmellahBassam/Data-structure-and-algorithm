@@ -9,10 +9,10 @@
 */
 
 const countVowels = (str) => {
+  // First approach
   let counter = 0;
-  for (let index = 0; index < str.length; index++) {
-    const element = str[index].toLowerCase();
-    switch (element) {
+  for (const char of str) {
+    switch (char) {
       case "a":
       case "e":
       case "i":
@@ -21,6 +21,9 @@ const countVowels = (str) => {
         counter++;
     }
   }
-  return counter;
+  // return counter;
+  //Second approach
+  const matches = str.match(/[aeiou]/gi);
+  return matches ? matches.length : 0;
 };
 // console.log(countVowels("hello hI"));
