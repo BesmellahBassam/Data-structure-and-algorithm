@@ -1,21 +1,21 @@
 /*
----Directions
-   Given a number, return whether it is "positive", "negative", or "zero".
-   --Notes
-   --Examples
-   isPositiveOrNegative(0) === "zero"
-   isPositiveOrNegative(5) === "positive"
-   isPositiveOrNegative(-3) === "negative"
-   isPositiveOrNegative(1) === "negative"
+Find GCD of two numbers
+Descriptin: Compute the greatest common divisor using repeated subtractin or the Euclidean
+algorithm.
+Example:
+Input:
+12, 18
+Output:
+6
 */
 
-const isPositiveOrNegative = (number) => {
-  if (number == 0) {
-    return "zero";
-  } else if (number > 1) {
-    return "positive";
-  } else if (number < 1) {
-    return "negative";
+const findGCD = (a, b) => {
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
   }
+  return a;
 };
-// console.log(isPositiveOrNegative(0));
+
+// console.log(findGCD(12, 18));  // 6

@@ -9,9 +9,11 @@ const swapVariables = (a, b) => {
   // First approach
   // [a, b] = [b, a];
   // return { a, b };
+
   // Use addition and subtraction
-  b = b - a;
-  a = a + a;
+  a = a + b; //  a =  a + b
+  b = a - b; //  b = (a + b) - b b = 10 - 8 = 2
+  a = a - b; //  a = (a + b) -  a=
   return { a, b };
 };
 console.log(swapVariables(10, 20));

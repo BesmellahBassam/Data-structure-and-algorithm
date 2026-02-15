@@ -10,13 +10,27 @@
 */
 function checkCharacter(char) {
   if (typeof char !== "string" || char.length !== 1) {
-    return "Data must be one chararacter.";
+    return "Data must be one character.";
   }
 
-  if (/[aeiou]/i.test(char)) return "Vowel";
-  if (/[a-z]/i.test(char)) return "Consonant";
-  if (/[0-9]/.test(char)) return "Digit";
+  const lowerChar = char.toLowerCase();
+
+  //  if vowel
+  if (lowerChar === "a" || lowerChar === "e" || lowerChar === "i" || lowerChar === "o" || lowerChar === "u") {
+    return "Vowel";
+  }
+
+  // if a character not vowel
+  if (lowerChar >= "a" && lowerChar <= "z") {
+    return "Consonant";
+  }
+
+  // if number
+  if (char >= "0" && char <= "9") {
+    return "Digit";
+  }
 
   return "Special Symbol";
 }
+
 // console.log(checkCharacter("a"));
