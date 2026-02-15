@@ -11,15 +11,16 @@
 */
 
 const reverseNumber = (number) => {
-  reversed = "";
-  const toString = number.toString();
-  for (let index = 0; index < toString.length; index++) {
-    reversed = toString[index] + reversed;
+  const sign = number < 0 ? -1 : 1;
+  let n = Math.abs(number);
+  let reversed = 0;
+
+  while (n > 0) {
+    const digit = n % 10; // last digit
+    reversed = reversed * 10 + digit; // append digit to reversed
+    n = n / 10; // remove last digit
   }
-  reversed = parseInt(reversed);
-  if (number < 1) {
-    reversed = reversed * -1;
-  } else reversed = reversed * 1;
-  return reversed;
+
+  return sign * reversed;
 };
 // console.log(reverseNumber(15));

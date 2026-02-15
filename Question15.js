@@ -11,17 +11,24 @@
 */
 
 const isArmStrong = (number) => {
-  const toString = number.toString();
-  let sumOfAll = 0;
-  for (let i = 0; i < toString.length; i++) {
-    let temp = parseInt(toString[i]);
-    let tempTotal = temp;
-    for (let j = 1; j < toString.length; j++) {
-      tempTotal = tempTotal * temp;
-    }
-    sumOfAll += tempTotal;
+  // count the number of digits
+  let countedDigits = 0;
+  let temp = number;
+  while (temp > 0) {
+    countedDigits++;
+    temp = Math.floor(temp / 10);
   }
-  if (sumOfAll == number) return "Arm Strong";
-  return "No Arm strong";
+
+  // calculate sum of each digit raised to power of countedDigits
+  let sumOfAll = 0;
+  temp = number;
+  while (temp > 0) {
+    let digit = temp % 10;
+    sumOfAll += digit ** countedDigits;
+    temp = Math.floor(temp / 10);
+  }
+
+  return sumOfAll === number ? "Arm Strong" : "No Arm strong";
 };
+
 // console.log(isArmstrong(370));

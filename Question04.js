@@ -9,7 +9,7 @@
 
 const displayFactors = (number) => {
   const factors = [];
-  for (let index = 0; index < number; index++) {
+  for (let index = 1; index < number; index++) {
     if (number % index === 0) {
       factors.push(index);
     }

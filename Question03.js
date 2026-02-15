@@ -8,11 +8,12 @@
 */
 
 const sumOfDigits = (number) => {
-  const toString = number.toString();
-  result = 0;
-  for (const element of toString) {
-    const parsed = parseInt(element);
-    result += parsed;
+  let result = 0;
+  let n = Math.abs(number);
+  while (n > 0) {
+    const digit = n % 10;
+    result += digit;
+    n = Math.floor(n / 10);
   }
   return result;
 };

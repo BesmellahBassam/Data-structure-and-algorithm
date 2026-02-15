@@ -10,8 +10,13 @@
 */
 
 const isPrime = (number) => {
-  if (number % 2 !== 0) {
-    return "prime";
-  } else return "not prime";
+  if (number <= 1) return "not prime";
+  if (number === 2) return "prime";
+
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) return "not prime";
+  }
+
+  return "prime";
 };
 // console.log(isPrime(21));

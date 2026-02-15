@@ -9,7 +9,6 @@
 const fibonacci = (number) => {
   const fibArr = [0, 1];
   if (number <= 1) return [0];
-  if (number == 2) return fibArr;
   for (let index = 2; index < number; index++) {
     const nextFib = sequence[index - 1] + sequence[index - 2];
     fibArr.push(nextFib);

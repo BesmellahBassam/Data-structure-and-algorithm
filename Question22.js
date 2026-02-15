@@ -12,7 +12,7 @@ Output:
 */
 
 const collatzSequence = (number) => {
-  count = 0;
+  let count = 0;
   let n = number;
   while (n > 1) {
     if (n % 2 == 0) {
