@@ -1,4 +1,5 @@
 /*
+Description:
 Write a functin that checks whether a binary tree is symmetric around its center.
 A tree is symmetric if the lef subtree is a mirror image of the right subtree.
 */

@@ -1,4 +1,5 @@
 /*
+Description:
 Modify a binary tree so that it becomes its mirror image by swapping the lef and right
 child of every node.
 */

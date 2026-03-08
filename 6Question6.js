@@ -1,4 +1,5 @@
 /*
+Description:
 Write a functin that checks whether a binary tree is symmetric around its center.
 A tree is symmetric if the lef subtree is a mirror image of the right subtree.
 */
@@ -30,6 +31,6 @@ tree.root.left = new Node(3);
 tree.root.right = new Node(7);
 tree.root.left.left = new Node(1);
 tree.root.left.right = new Node(2);
-console.log("childrenSum ", tree.sumChildren()); // true
+console.log(tree.sumChildren()); // true
 tree.root.right.val = 99;
-console.log("childrenSum ", tree.sumChildren()); // false
+console.log(tree.sumChildren()); // false
