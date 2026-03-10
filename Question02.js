@@ -16,11 +16,12 @@ const reverseNumber = (number) => {
   let reversed = 0;
 
   while (n > 0) {
-    const digit = n % 10; // last digit
-    reversed = reversed * 10 + digit; // append digit to reversed
-    n = n / 10; // remove last digit
+    const digit = n % 10;
+    reversed = reversed * 10 + digit;
+    n = Math.floor(n / 10);
   }
 
   return sign * reversed;
 };
-// console.log(reverseNumber(15));
+
+console.log(reverseNumber(15));
