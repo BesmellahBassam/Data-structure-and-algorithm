@@ -9,10 +9,10 @@ Output:
 Equal
 */
 const compareTwoArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) return false;
+  if (arr1.length !== arr2.length) return "Not Equal";
   for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) return false;
+    if (arr1[i] !== arr2[i]) return "Not Equal";
   }
-  return true;
+  return "Equal";
 };
-// console.log(compareTwoArrays([1, 2, 3], [1, 2, 3]));
+console.log(compareTwoArrays([1, 2, 3], [1, 2, 3]));

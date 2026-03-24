@@ -7,9 +7,9 @@ Input:
 Output:
 3
 */
-const findMissingNumberInArray2 = (array) => {
+const findMissingNumberInArray = (array) => {
   for (let i = 0; i < array.length; i++) {
     if (i + 1 !== array[i]) return i + 1;
   }
 };
-// console.log(findMissingNumberInArray2([1, 2, 3, 5])); // Output: 3//[1, 2, 4, 5]
+// console.log(findMissingNumberInArray([1, 2, 3, 5])); // Output: 3
