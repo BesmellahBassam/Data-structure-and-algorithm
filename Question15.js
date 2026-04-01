@@ -6,8 +6,7 @@ Example:
 
 function maxSubarraySum(nums) {
   if (nums.length === 0) {
-    console.log("The array is empty");
-    return;
+    return "The array is empyt";
   }
 
   let currentSum = nums[0];
@@ -17,7 +16,6 @@ function maxSubarraySum(nums) {
     const x = nums[i];
 
     currentSum = Math.max(x, currentSum + x);
-    console.log(currentSum);
 
     bestSum = Math.max(bestSum, currentSum);
   }

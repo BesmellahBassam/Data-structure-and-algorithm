@@ -16,7 +16,6 @@ function binarySearchSortedArray(arr, target) {
     if (arr[mid] === target) {
       return mid;
     } else if (target < arr[mid]) {
-      console.log("left half");
       high = mid - 1; // look n left half
     } else {
       low = mid + 1; // look n right half

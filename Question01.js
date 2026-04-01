@@ -5,8 +5,8 @@ Given an array of numbers, return the second largest number.
   secondLargestNumber([1, 99, 50, 70]) === 70
 */
 const secondLargestNumber = (arr) => {
-  let largest = arr[0];
-  let secondLargest = arr[0];
+  let largest = 0;
+  let secondLargest = 0;
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > largest) {

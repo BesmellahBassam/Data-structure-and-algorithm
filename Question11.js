@@ -7,7 +7,7 @@ Example:
 
 const stringRotation = (str1, str2) => {
   if (str1.length !== str2.length) return false;
-  if (str1 + str1.includes(str2)) return true;
+  if ((str1 + str1).includes(str2)) return true;
   return false;
 };
 // console.log(stringRotation("waterbottle", "erbottlewat"));
