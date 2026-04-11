@@ -22,7 +22,6 @@ function process(str) {
       stack.push(char); // add character
     }
   }
-
   return stack.join("");
 }
 

@@ -1,3 +1,15 @@
+
+/*
+Problem: Given a string containing only '(' , ')' , '{' , '}' , '[' , ']' , determine if the string
+is valid.
+A valid string must have brackets closed in the correct order.
+Example:
+Input: s = "()[]{}"
+Output: true
+Input: s = "(]"
+Output: false
+*/
+
 function isValid(str) {
   const stack = [];
   const map = {
